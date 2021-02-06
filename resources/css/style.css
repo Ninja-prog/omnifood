@@ -1,0 +1,166 @@
+/* ----------------------------------- */
+/* ----------- BASIC SETUP ----------- */
+/* ----------------------------------- */
+
+* {
+    /* 
+    This block deletes all margins/paddings/box-sizing
+    Should be the very fitst block in CSS file
+    */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    /* Lato from google fonts will be used, otherwise Arial, otherwise and sans-serif fonts */
+    font-family: 'Lato', 'Arial', sans-serif;
+    /* the size of the font */
+    font-size: 20px;
+    /* boldness of the font */
+    font-weight: 300;
+    /* The browser emphasizes legibility over rendering speed and geometric precision.
+    This enables kerning and optional ligatures. */
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ----------------------------------- */
+/* ------- REUSABLE COMPONENTS ------- */
+/* ----------------------------------- */
+
+.row {
+    width: 1140px;
+    margin: 0 auto; /* 0 - top and bottom, auto - right and left */
+}
+
+
+/* ----------------------------------- */
+/* ------------ HEADINGS ------------- */
+/* ----------------------------------- */
+
+h1 {
+    margin: 0;
+    color: #fff;
+    /* in responsive web desing we want 200% of parent 20px in html block */
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+
+/* ----------------------------------- */
+/* ------------- BUTTONS ------------- */
+/* ----------------------------------- */
+
+/* btn:link - how it looks before click
+   btn:visited - how it looks after click */
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    /* transition changes from one color to another by seconds */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+/* btn:link - how it looks before click
+   btn:visited - how it looks after click */
+.btn-full:link,
+.btn-full:visited {
+    /* 
+    To get color google search "flat ui colors" 
+    to get different shade search on 0to255.com"
+    */
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+/* btn:hover - when we hover mouse over the button what happen
+   btn:active - when we click on button what happen */
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
+    
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+/* ----------------------------------- */
+/* -------------- HEDER -------------- */
+/* ----------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none; /* removes bullet points from unordered list */
+    margin-top: 60px;
+}
+
+.main-nav li {
+    display: inline-block; /* Shows elements horizontally */
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 5px 0;
+    color: #fff;
+    text-decoration: none; /* removes underline from links */
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
+
+
